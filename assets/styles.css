@@ -1,0 +1,233 @@
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos de texto e títulos */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    color: #f3f3f3; /* Branco para o título principal */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #000000; /* Azul escuro para títulos de seção */
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #deff04;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: #000000; /* Vermelho para títulos de projetos */
+    font-size: 1.5rem;
+}
+
+/* Cores de texto para diferentes seções */
+.sobre-mim p {
+    color: #f8f8f8; /* Azul acinzentado */
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projeto-card p {
+    color: #000000; /* Cinza para descrição dos projetos */
+    text-align: center;
+}
+
+.contato p {
+    color: #2980b9; /* Azul para informações de contato */
+}
+
+/* Header */
+header {
+    background-color: #181818;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in;
+}
+
+header p {
+    color: #008cd2; /* Azul claro para subtítulo */
+    font-size: 1.2rem;
+}
+
+/* Navegação */
+nav {
+    background-color: #ffffff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #000000; /* Branco azulado */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #474646;
+}
+
+/* Seções principais */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sobre mim */
+.sobre-mim {
+    background-color: #484848;
+     }
+
+
+/* Projetos */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.projeto-card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Formulário de Contato */
+#formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Redes Sociais */
+.redes-sociais {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #2c3e50;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #ffffff; /* Branco azulado */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
